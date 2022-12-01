@@ -3,8 +3,20 @@
     "version": "1.0.0",
     "description": "jest test",
     "main": "index.js",
+    "jest": {
+      "verbose": true,
+      "collectCoverageFrom" : ["**/*.{js,jsx}", "!**/node_modules/**", "!**/coverage/**"],
+      "coverageThreshold": {
+        "global": {
+          "branches": 100,
+          "functions": 100,
+          "lines": 100
+        }        
+      }
+    },
     "scripts": {
-      "test": "jest"
+      "test": "jest",
+      "coverage": "jest --collectCoverage"
     },
     "keywords": [
       "jest",
